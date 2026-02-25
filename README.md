@@ -8,13 +8,16 @@ Original code taken from [CyKit](https://github.com/CymatiCorp/CyKit)
 ```
 pip install pipenv
 python -m pipenv install
+
+# if you want to export .fif files
+python -m pipenv install --dev
 ```
 
 ### Usage
 Disable the motion data in Emotiv app settings  
 Connect dongle, turn on the headset, wait for the light from two indicators
 ```
-# frist terminal
+# first terminal
 python -m pipenv run python main.py
 ```
 
@@ -31,6 +34,10 @@ Or use examples/read_data.py to get raw data
 ```
 # second terminal
 python -m pipenv run python examples/read_data.py
+```
+```
+# for exporting data into .fif files
+python -m pipenv run python examples/read_and_export_mne.py
 ```
 
 ### Config
