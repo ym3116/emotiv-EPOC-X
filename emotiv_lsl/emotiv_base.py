@@ -21,8 +21,7 @@ class EmotivBase():
         outlet = StreamOutlet(self.get_stream_info())
 
         device = self.get_hid_device()
-        hid_device = hid.device()
-        hid_device.open_path(device['path'])
+        hid_device = hid.Device(path=device['path'])
 
         while True:
             data = hid_device.read(self.READ_SIZE)
